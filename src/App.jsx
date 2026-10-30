@@ -11,6 +11,9 @@ import AuthLayout from "./layouts/AuthLayout";
 import AddRole from "./pages/AddRole";
 import EditRole from "./pages/EditRole";
 import NotFound from "./pages/NotFound";
+import Users from "./pages/Users";
+import AddUser from "./pages/AddUser";
+import EditUser from "./pages/EditUser";
 function MainLayout({ children }) {
   return (
     <div className="layout-wrapper layout-content-navbar">
@@ -67,6 +70,30 @@ function App() {
               <MainLayout>
               <Dashboard />
             </MainLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/users" element={
+            <ProtectedRoute>
+              <MainLayout>
+                <Users />
+              </MainLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/users/create" element={
+            <ProtectedRoute>
+              <MainLayout>
+                <AddUser />
+              </MainLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/users/:id/edit" element={
+            <ProtectedRoute>
+              <MainLayout>
+                <EditUser />
+              </MainLayout>
             </ProtectedRoute>
           }
         />

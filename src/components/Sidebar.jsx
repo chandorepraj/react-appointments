@@ -114,6 +114,13 @@ function Sidebar() {
                 <div data-i18n="Analytics">Roles</div>
               </a>
             </li>
+            {/* Users */}
+            <li className="menu-item ">
+              <a href="#"  onClick={() => navigate(`/users`)} className="menu-link">
+                <i className="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Users</div>
+              </a>
+            </li>
             {/* Layouts */}
             <li className={`menu-item ${openMenu === 'layouts' ? 'open' : ''}`}>
               <a href="#" className="menu-link menu-toggle" onClick={(e) => {
